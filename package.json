@@ -1,0 +1,19 @@
+{
+  "name": "projeto-crud",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Gadiel Kalleb",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "devstart": "nodemon index.js"
+  },
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.4"
+  }
+}
