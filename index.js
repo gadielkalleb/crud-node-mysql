@@ -4,6 +4,7 @@ const app = express()
 const port = process.env.PORT || 3000
 const mysql = require('mysql')
 const pessoas = require('./routes/pessoas')
+const projetos = require('./routes/projetos')
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -23,6 +24,7 @@ app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => res.render('home'))
 app.use('/pessoas', pessoas(dependencies))
+app.use('/projetos', projetos)
 
 
 connection.connect((err)=>{
