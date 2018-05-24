@@ -16,7 +16,11 @@
       <td>
         <div class="btn-group" role="group" aria-label="Basic example">
           <a type="button" class="btn btn-secondary">Editar</a>
-          <a type="button" class="btn btn-secondary" href="/pessoas/delete/<%= pessoa.id %>" onclick"return confirm('Deseja realmente excluir?)">Excluir</a>
+          <a type="button" class="btn btn-secondary" href="/pessoas/delete/<%= pessoa.id %>" onclick="return confirm('Deseja realmente excluir?')">Excluir</a>
         </div>
       </td>
     </tr>
+    <% }) %>
+  </table>
+
+  <% include ../partials/footer.ejs %>
