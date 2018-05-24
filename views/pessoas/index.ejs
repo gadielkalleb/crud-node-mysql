@@ -15,13 +15,8 @@
       <td><%= pessoa.cargo %></td>
       <td>
         <div class="btn-group" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-secondary">Left</button>
-          <button type="button" class="btn btn-secondary">Middle</button>
-          <button type="button" class="btn btn-secondary">Right</button>
+          <a type="button" class="btn btn-secondary">Editar</a>
+          <a type="button" class="btn btn-secondary" href="/pessoas/delete/<%= pessoa.id %>" onclick"return confirm('Deseja realmente excluir?)">Excluir</a>
         </div>
       </td>
     </tr>
-  <% }) %>
-  </table>
-      
-<% include ../partials/footer.ejs %>

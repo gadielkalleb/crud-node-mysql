@@ -5,4 +5,9 @@ const index = async(connection, req, res) => {
     res.render('pessoas/index', { pessoas: results})
 }
 
-module.exports = { index }
+const deleteOne = async(connection, req, res) => {
+    await pessoas.deleteOne(connection, req.params.id)
+    res.redirect('/pessoas')
+}
+
+module.exports = { index, deleteOne }
