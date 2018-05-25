@@ -3,6 +3,7 @@ const path = require('path')
 const app = express()
 const port = process.env.PORT || 3000
 const mysql = require('mysql')
+const bodyParser = require('body-parser')
 const pessoas = require('./routes/pessoas')
 const projetos = require('./routes/projetos')
 const connection = mysql.createConnection({
@@ -17,6 +18,7 @@ const dependencies = {
 }
 
 app.use(express.static('public'))
+app.use(bodyParser.urlencoded({ extended: false}))
 
 // view engine
 app.set('views', path.join(__dirname, 'views'))
